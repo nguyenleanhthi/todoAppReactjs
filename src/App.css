@@ -1,38 +1,86 @@
-.App {
-  text-align: center;
+body {
+    background-color: #F5F5F5;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.App .title {
+    font-size: 100px;
+    color: rgba(175, 47, 47, 0.15);
+    margin-bottom: 15px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.container {
+    background-color: #fff;
+    position: relative;
+    width: 500px;
+    margin: 0 auto 40px;
+    padding: 0;
+    border: 1px solid #EEE;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 25px 50px 0 rgba(0, 0, 0, 0.1);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.container::after {
+    content: '';
+    position: absolute;
+    width: calc(100% - 8px);
+    height: 100%;
+    border: 1px solid #EEE;
+    margin: 0 3px;
+    top: 6px;
+    z-index: -1;
+    background-color: inherit;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 25px 50px 0 rgba(0, 0, 0, 0.1);
 }
 
-.App-link {
-  color: #61dafb;
+.container::before {
+    content: '';
+    position: absolute;
+    width: calc(100% - 16px);
+    height: 100%;
+    border: 1px solid #EEE;
+    margin: 0 6px;
+    top: 12px;
+    z-index: -2;
+    background-color: inherit;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 25px 50px 0 rgba(0, 0, 0, 0.1);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.container .header {
+    display: flex;
+    padding: 10px 5px;
+    border: 1px solid #EEE;
+    border-bottom: 2px solid #EEE;
+}
+
+.container .header img {
+    cursor: pointer;
+}
+
+.container .header input {
+    font-family: 'Helvetica Neue', Helvetica, arial, sans-serif;
+    font-weight: 300;
+    font-size: 24px;
+    margin-left: 12px;
+    width: 100%;
+    border: none;
+    outline: none;
+}
+
+.container-logo {
+    height: 40vmin;
+    pointer-events: none;
+}
+
+.container-header {
+    background-color: #282c34;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
+}
+
+.container-link {
+    color: #61dafb;
 }
